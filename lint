@@ -1,0 +1,35 @@
+#!/usr/bin/env php
+<?php
+
+//"lint" ... group linter for PHP, dalecosp 1/11/2016 0.1
+
+if (!strlen($argv[1])) {
+
+    help();
+}
+
+$wd   = pathinfo($argv[1]);
+$wd   = $wd[dirname] . "/" . $wd[basename];
+$list = glob("$wd/*");
+
+foreach ($list as $file) {
+
+   if (substr( $file, -4) == ".php") {
+
+      system("php -l $file");
+
+   } else {
+
+      $file_type = `file $file`;
+
+      if (stristr($file_type, "PHP")) {
+
+         system("php -l $file");
+      }
+   }
+}
+
+function help() {
+
+   exit("No argument given; call 'lint \$PWD' for batch PHP syntax checking.");
+}
