@@ -6,6 +6,6 @@ Usage:  lint $PWD
 
 Output:
 
-No syntax errors detected in /home/user/bar.php
-Errors parsing /home/user/baz.php
+No syntax errors detected in /home/user/bar.php<br>
+Errors parsing /home/user/baz.php<br>
 No syntax errors detected in /home/user/foo
