@@ -2,7 +2,9 @@
 
 Batch style syntax checking for PHP.  Tested and working on CentOS, FreeBSD.
 
-Usage:  lint $PWD
+Installation: place "lint" in your $PATH.  Name it something [_lintcmd_] that makes sense (I called it _lint_ on the CentOS system, which didn't have a 'lint' already installed; on FreeBSD, it's at _/usr/local/bin/phplint_ and called as _phplint_).
+
+Usage:  _lintcmd_ $PWD
 
 Output:
 
